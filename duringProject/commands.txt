@@ -1,0 +1,1 @@
+dbt test --select test_type:generic = only runs a test for generic test
