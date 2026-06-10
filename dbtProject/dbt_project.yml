@@ -44,4 +44,4 @@ models:
     # 3. MARTS LAYER (Gold / Reporting)
     marts:
       +materialized: table       # Fully materialized reporting tables
-      +schema: marts             # Suffix like '_marts' or '_analytics'
+      +schema: gold
