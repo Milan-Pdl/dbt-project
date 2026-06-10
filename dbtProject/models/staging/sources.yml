@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: core_banking
+    description: "Raw operational data streams from the core banking solution."
+    database: dummybank  # Ensure this matches your local database name in profiles.yml
+    schema: public
+    tables:
+      - name: customer
+        description: "Customer master profiles including KYC details."
+      - name: branch
+        description: "Branch network metadata including operational clusters."
+      - name: product
+        description: "Product and scheme definition codes."
+      - name: account
+        description: "Account master ledger maintaining current balances and ownership."
+      - name: card
+        description: "Debit and credit card associations linked to active bank accounts."
+      - name: hist_transactional
+        description: "Historical ledger record tracking financial movements."
