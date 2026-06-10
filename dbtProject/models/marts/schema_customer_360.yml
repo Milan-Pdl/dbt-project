@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: customer_360
+    description: "Customer 360 profile combining customer, account, and transaction metrics in the gold schema."
+    columns:
+      - name: customer_id
+        description: "Customer identifier."
+      - name: customer_name
+        description: "Customer name."
+      - name: email
+        description: "Customer email address."
+      - name: phone_number
+        description: "Customer phone number."
+      - name: country
+        description: "Customer country."
+      - name: address
+        description: "Customer address."
+      - name: account_count
+        description: "Number of accounts held by the customer."
+      - name: total_account_balance
+        description: "Aggregate account balance across the customer's accounts."
+      - name: transaction_count
+        description: "Total number of transactions linked to the customer."
+      - name: total_transaction_amount
+        description: "Total transaction amount linked to the customer's accounts."
+      - name: last_transaction_date
+        description: "Most recent transaction date for the customer."

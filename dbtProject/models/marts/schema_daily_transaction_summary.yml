@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: daily_transaction_summary
+    description: "Daily transaction aggregates combining intermediate transaction and branch data in the gold schema."
+    columns:
+      - name: summary_date
+        description: "Transaction date for the daily summary."
+      - name: branch_id
+        description: "Branch identifier."
+      - name: branch_name
+        description: "Branch display name."
+      - name: province
+        description: "Branch province."
+      - name: city_name
+        description: "Branch city name."
+      - name: cluster_name
+        description: "Branch cluster name."
+      - name: transaction_count
+        description: "Total number of transactions for the branch and date."
+      - name: total_transaction_amount
+        description: "Sum of transaction amounts for the branch and date."
+      - name: avg_transaction_amount
+        description: "Average transaction amount for the branch and date."
+      - name: max_transaction_amount
+        description: "Maximum transaction amount for the branch and date."
+      - name: min_transaction_amount
+        description: "Minimum transaction amount for the branch and date."

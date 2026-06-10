@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: branch_performance_summary
+    description: "Branch performance summary using intermediate account and transaction data in the gold schema."
+    columns:
+      - name: branch_id
+        description: "Branch identifier."
+      - name: branch_name
+        description: "Branch display name."
+      - name: province
+        description: "Branch province."
+      - name: city_name
+        description: "Branch city name."
+      - name: cluster_name
+        description: "Branch cluster name."
+      - name: account_count
+        description: "Number of accounts for the branch."
+      - name: customer_count
+        description: "Number of unique customers served by the branch."
+      - name: total_account_balance
+        description: "Total account balance held at the branch."
+      - name: total_transaction_count
+        description: "Total number of transactions processed by the branch."
+      - name: total_transaction_amount
+        description: "Sum of transaction amounts processed by the branch."
+      - name: avg_transaction_amount
+        description: "Average transaction amount processed by the branch."
+      - name: max_transaction_amount
+        description: "Maximum single transaction amount for the branch."
+      - name: last_transaction_date
+        description: "Most recent transaction date for the branch."
