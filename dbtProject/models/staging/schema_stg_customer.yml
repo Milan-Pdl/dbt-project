@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: stg_customer
+
+    description: >
+      Customer master table. One row per customer containing full information.
+      Most customers are Nepali.
+    columns:
+      - name: customer_id
+        description: "Primary key. Unique customer identifier in format C0001, C0002, ..."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_name
+        description: "Customer name."
+        tests:
+          - not_null
+
+      - name: address
+        description: "Customer address."
+      - name: phone_number
+        description: "Customer phone number."
+        tests:
+          - not_null
+
+      - name: postal_code
+        description: "Postal code for the customer address."
+
+      - name: country
+        description: "Customer country."
+      - name: email
+        description: "Customer email address. Must be unique when available."
+        tests:
+          - unique
+          - not_null
+
+      - name: father_name
+        description: "Customer father's name."
+
+      - name: mother_name
+        description: "Customer mother's name."
+
+      - name: occupation
+        description: "Customer occupation."
+
+      - name: education
+        description: "Customer highest education level."
+
+      - name: nationality
+        description: "Customer nationality."
+        tests:
+          - not_null
+
+      - name: created_date
+        description: "Record creation timestamp."
+        tests:
+          - not_null
+
+      - name: modified_date
+        description: "Record last modified timestamp."
+        tests:
+          - not_null
