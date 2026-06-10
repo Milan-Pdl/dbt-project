@@ -560,9 +560,9 @@ VALUES
 INSERT INTO hist_transactional
     (tran_id,account_id,tran_amount,tran_date,tran_crncy,branch_id,tran_particular,tran_remarks,created_date,modified_date)
 VALUES
-    ('TXN000301','AC000125',13825.27,'2022-05-20','NPR','BR013','IN_BRANCH','Loan EMI payment at branch','2022-05-20','2024-10-16'),
-    ('TXN000257','AC000068',860.84,'2022-05-22','NPR','BR020','DIGITAL','Salary credit','2022-05-22','2025-11-25'),
-    ('TXN000270','AC000004',146200.09,'2022-05-22','NPR','BR004','DIGITAL','Mobile banking transfer','2022-05-22','2023-07-03'),
+    ('TXN000301','AC000125',13825.27,'2022-05-20','NPR','BR013','IN_BRANCH','Loan EMI payment at branch','2022-05-20','2026-10-16'),
+    ('TXN000257','AC000068',860.84,'2022-05-22','NPR','BR020','DIGITAL','Salary credit','2022-05-22','2026-11-25'),
+    ('TXN000270','AC000004',146200.09,'2022-05-22','NPR','BR004','DIGITAL','Mobile banking transfer','2026-05-22','2023-07-03'),
     ('TXN000239','AC000052',3703.6,'2022-05-27','NPR','BR008','DIGITAL','ConnectIPS transfer','2022-05-27','2023-04-11'),
     ('TXN000328','AC000046',2992.55,'2022-05-28','NPR','BR015','IN_BRANCH','Cheque deposit at branch','2022-05-28','2026-06-07'),
     ('TXN000176','AC000107',4881.53,'2022-05-30','NPR','BR026','IN_BRANCH','KYC update transaction','2022-05-30','2023-09-03'),
