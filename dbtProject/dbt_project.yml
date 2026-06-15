@@ -45,3 +45,7 @@ models:
     marts:
       +materialized: table       # Fully materialized reporting tables
       +schema: gold
+
+snapshots:
+  dbtProject:  # Replace with your actual project name if different
+    +target_schema: gold
