@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: intermediate_product
+    description: >
+      Intermediate product master table. Mirrors `stg_product` with intermediate metadata.
+    columns:
+      - name: product_id
+        description: "Primary key. Unique product identifier."
+        tests:
+          - unique
+          - not_null
+
+      - name: schm_type
+        description: "Product scheme type code."
+
+      - name: schm_code
+        description: "Product scheme code."
+
+      - name: product_desc
+        description: "Product description."
+
+      - name: created_date
+        description: "Record creation timestamp."
+        tests:
+          - not_null
+
+      - name: modified_date
+        description: "Record last modified timestamp."
+        tests:
+          - not_null

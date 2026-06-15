@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: intermediate_hist_transcations
+    description: >
+      Intermediate historical transactions. Mirrors `stg_hist_transactional` and preserves transaction history.
+    columns:
+      - name: tran_id
+        description: "Primary key. Unique transaction identifier."
+        tests:
+          - unique
+          - not_null
+
+      - name: account_id
+        description: "Account foreign key reference."
+        tests:
+          - not_null
+
+      - name: tran_amount
+        description: "Transaction amount."
+        tests:
+          - not_null
+
+      - name: tran_date
+        description: "Transaction date."
+        tests:
+          - not_null
+
+      - name: tran_crncy
+        description: "Transaction currency code."
+        tests:
+          - not_null
+
+      - name: branch_id
+        description: "Branch foreign key reference."
+        tests:
+          - not_null
+
+      - name: tran_particular
+        description: "Transaction channel type."
+        tests:
+          - not_null
+
+      - name: tran_remarks
+        description: "Transaction remarks or description."
+
+      - name: created_date
+        description: "Record creation timestamp."
+        tests:
+          - not_null
+
+      - name: modified_date
+        description: "Record last modified timestamp."
+        tests:
+          - not_null

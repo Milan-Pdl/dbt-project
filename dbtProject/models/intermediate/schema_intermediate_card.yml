@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: intermediate_card
+    description: >
+      Intermediate card table. Mirrors `stg_card` with intermediate metadata.
+    columns:
+      - name: card_number
+        description: "Primary key. Unique card number."
+        tests:
+          - unique
+          - not_null
+
+      - name: account_id
+        description: "Account foreign key reference."
+        tests:
+          - not_null
+
+      - name: balance
+        description: "Current card balance."
+        tests:
+          - not_null
+
+      - name: card_type
+        description: "Card type, such as DEBIT or CREDIT."
+        tests:
+          - not_null
+
+      - name: closing_balance
+        description: "Closing balance on the card."
+
+      - name: card_expiry_date
+        description: "Card expiry date."
+
+      - name: created_date
+        description: "Record creation timestamp."
+        tests:
+          - not_null
+
+      - name: modified_date
+        description: "Record last modified timestamp."
+        tests:
+          - not_null

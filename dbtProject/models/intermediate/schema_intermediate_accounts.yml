@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: intermediate_accounts
+    description: >
+      Intermediate account hub. Mirrors `stg_account` with incremental metadata preserved.
+    columns:
+      - name: account_id
+        description: "Primary key. Unique account identifier."
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        description: "Customer foreign key reference."
+        tests:
+          - not_null
+
+      - name: branch_id
+        description: "Branch foreign key reference."
+        tests:
+          - not_null
+
+      - name: account_balance
+        description: "Current account balance."
+        tests:
+          - not_null
+
+      - name: lien_amt
+        description: "Lien amount currently held against the account."
+        tests:
+          - not_null
+
+      - name: acct_cls_flg
+        description: "Account closure flag. Y = closed, N = open."
+        tests:
+          - not_null
+
+      - name: product_id
+        description: "Product foreign key reference."
+        tests:
+          - not_null
+
+      - name: schm_type
+        description: "Account scheme type code."
+
+      - name: schm_code
+        description: "Account scheme code."
+
+      - name: acct_crncy_code
+        description: "Account currency code."
+        tests:
+          - not_null
+
+      - name: acct_opn_date
+        description: "Account opening date."
+        tests:
+          - not_null
+
+      - name: created_date
+        description: "Record creation timestamp."
+        tests:
+          - not_null
+
+      - name: modified_date
+        description: "Record last modified timestamp."
+        tests:
+          - not_null
