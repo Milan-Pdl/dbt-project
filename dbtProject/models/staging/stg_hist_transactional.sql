@@ -1,3 +1,8 @@
+{{ config(
+    materialized = 'incremental',
+    incremental_strategy = 'append',
+    unique_key ='tran_id'
+) }}
 with source as (
     select * from {{ source('core_banking', 'hist_transactional') }}
 )
