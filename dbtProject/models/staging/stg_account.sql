@@ -1,5 +1,18 @@
+{{ config(
+    materialized = 'incremental',
+    incremental_strategy = 'append',
+    unique_key ='account_id'
+) }}
+
 with source as (
     select * from {{ source('core_banking', 'account') }}
+
+{% if is_incremental() %}
+
+where modified_date > (select coalesce(max(modified_date),'1900-01-01') from {{ this }} )
+
+{% endif %}
+
 )
 select
     account_id,

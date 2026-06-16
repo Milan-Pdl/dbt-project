@@ -33,7 +33,7 @@ models:
   dbtProject:
     # 1. STAGING LAYER (Bronze)
     staging:
-      +materialized: view        # Views are best practice for staging
+      +materialized: table       # Views are best practice for staging
       +schema: staging           # Will create a schema suffix like '_staging'
     
     # 2. INTERMEDIATE LAYER (Silver)
